@@ -1,0 +1,6 @@
+status: true
+data:
+  - id: 1001
+    content: really great post!
+  - id: 1002
+    content: that post sucks!

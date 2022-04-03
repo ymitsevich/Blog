@@ -1,0 +1,8 @@
+App\Entity\Tag:
+  attributes:
+    id:
+      groups: [ 'id', 'tag_list', 'tag_show' ]
+    name:
+      groups: [ 'tag_list', 'tag_show', 'tag_create' ]
+    posts:
+      groups: [ 'tag_show' ]

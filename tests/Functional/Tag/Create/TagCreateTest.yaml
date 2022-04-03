@@ -1,0 +1,4 @@
+\App\Entity\Tag:
+  tag1:
+    id: 101
+    name: goodToKnow

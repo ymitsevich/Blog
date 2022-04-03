@@ -1,0 +1,22 @@
+\App\Entity\User:
+  user1:
+    id: 1
+    username: alexbobson
+    email: abobson@gmial.com
+    password: unbreakable
+\App\Entity\Tag:
+  tag1:
+    id: 101
+    name: goodToKnow
+  tag2:
+    id: 102
+    name: hype
+\App\Entity\Post:
+  post1:
+    id: 21
+    title: Once upon...
+    content: Lorem Ipsum lorem ipsum LOREM IPSUM Lorem Ipsum lorem ipsum LOREM IPSUM Lorem Ipsum lorem ipsum LOREM IPSUM
+    createdBy: '@user1'
+    tags:
+      - '@tag1'
+      - '@tag2'

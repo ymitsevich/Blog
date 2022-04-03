@@ -1,0 +1,8 @@
+status: true
+data:
+  id: 1005
+  content: Ugly style!
+  createdBy:
+    id: 1
+  post:
+    id: 11

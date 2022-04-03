@@ -1,0 +1,10 @@
+status: true
+data:
+  id: 10
+  title: New Title
+  content: New content...
+  createdBy:
+    id: 1
+  tags:
+    - id: 102
+    - id: 103

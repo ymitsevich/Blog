@@ -1,0 +1,8 @@
+status: true
+data:
+  id: 1001
+  content: really great post!
+  createdBy:
+    id: 1
+  post:
+    id: 10
