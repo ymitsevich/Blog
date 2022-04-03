@@ -34,7 +34,7 @@
         "symfony/css-selector": "6.0.*",
         "symfony/maker-bundle": "^1.38",
         "symfony/phpunit-bridge": "^6.0",
-        "ymitsevich/funker": "^0.0.4"
+        "ymitsevich/funker": "^0.0.5"
     },
     "config": {
         "allow-plugins": {
