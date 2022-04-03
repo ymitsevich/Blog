@@ -20,7 +20,6 @@ use Symfony\Component\Serializer\Normalizer\ConstraintViolationListNormalizer;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
 use Symfony\Component\Validator\Exception\ValidationFailedException;
 use Nelmio\ApiDocBundle\Annotation\Operation;
-use OpenApi\Annotations as OA;
 
 class PostController extends AbstractController
 {
@@ -36,7 +35,6 @@ class PostController extends AbstractController
     }
 
     #[Operation(properties: ['operationId' => 'ListPosts'])]
-    #[OA\Tag(properties: ['name' => 'Post'])]
     #[Response(response: 200, description: 'List posts')]
     #[Route(path: '/post', methods: ['GET'])]
     public function index(): JsonResponse
@@ -50,7 +48,6 @@ class PostController extends AbstractController
     }
 
     #[Operation(properties: ['operationId' => 'ShowPost'])]
-    #[OA\Tag(properties: ['name' => 'Post'])]
     #[Response(response: 200, description: 'Show post')]
     #[Response(response: 404, description: 'Post not found')]
     #[Route(path: '/post/{id}', requirements: ['id' => '\d+'], methods: ['GET'])]
@@ -70,7 +67,6 @@ class PostController extends AbstractController
     }
 
     #[Operation(properties: ['operationId' => 'CreatePost'])]
-    #[OA\Tag(properties: ['name' => 'Post'])]
     #[Response(response: 201, description: 'Create post')]
     #[Response(response: 400, description: 'Invalid input data')]
     #[Route(path: '/post', methods: ['POST'])]
@@ -102,7 +98,6 @@ class PostController extends AbstractController
     }
 
     #[Operation(properties: ['operationId' => 'UpdatePost'])]
-    #[OA\Tag(properties: ['name' => 'Post'])]
     #[Response(response: 200, description: 'Update post')]
     #[Response(response: 400, description: 'Invalid input data')]
     #[Response(response: 404, description: 'Post not found')]
@@ -137,7 +132,6 @@ class PostController extends AbstractController
     }
 
     #[Operation(properties: ['operationId' => 'DeletePost'])]
-    #[OA\Tag(properties: ['name' => 'Post'])]
     #[Response(response: 204, description: 'Delete post')]
     #[Response(response: 404, description: 'Post not found')]
     #[Route(path: '/post/{id}', requirements: ['id' => '\d+'], methods: ['DELETE'])]

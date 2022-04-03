@@ -21,7 +21,6 @@ use Symfony\Component\Serializer\Normalizer\ConstraintViolationListNormalizer;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
 use Symfony\Component\Validator\Exception\ValidationFailedException;
 use Nelmio\ApiDocBundle\Annotation\Operation;
-use OpenApi\Annotations as OA;
 
 class CommentController extends AbstractController
 {
@@ -38,7 +37,6 @@ class CommentController extends AbstractController
     }
 
     #[Operation(properties: ['operationId' => 'ListComments'])]
-    #[OA\Tag(properties: ['name' => 'Comment'])]
     #[Response(response: 200, description: 'List comments')]
     #[Route(path: '/comment', methods: ['GET'])]
     public function index(): JsonResponse
@@ -52,7 +50,6 @@ class CommentController extends AbstractController
     }
 
     #[Operation(properties: ['operationId' => 'ListCommentsForPost'])]
-    #[OA\Tag(properties: ['name' => 'Comment'])]
     #[Response(response: 200, description: 'List comments for Post')]
     #[Route(path: '/post/{postId}/comment', methods: ['GET'])]
     public function indexForPost(int $postId): JsonResponse
@@ -71,7 +68,6 @@ class CommentController extends AbstractController
     }
 
     #[Operation(properties: ['operationId' => 'ShowComment'])]
-    #[OA\Tag(properties: ['name' => 'Comment'])]
     #[Response(response: 200, description: 'Show comment')]
     #[Response(response: 404, description: 'Comment not found')]
     #[Route(path: '/comment/{id}', requirements: ['id' => '\d+'], methods: ['GET'])]
@@ -91,7 +87,6 @@ class CommentController extends AbstractController
     }
 
     #[Operation(properties: ['operationId' => 'CreateCommentForPost'])]
-    #[OA\Tag(properties: ['name' => 'Comment'])]
     #[Response(response: 201, description: 'Create comment for post')]
     #[Response(response: 400, description: 'Invalid input data')]
     #[Route(path: '/post/{postId}/comment', methods: ['POST'])]
@@ -128,7 +123,6 @@ class CommentController extends AbstractController
     }
 
     #[Operation(properties: ['operationId' => 'DeleteComment'])]
-    #[OA\Tag(properties: ['name' => 'Comment'])]
     #[Response(response: 204, description: 'Delete comment')]
     #[Route(path: '/comment/{id}', requirements: ['id' => '\d+'], methods: ['DELETE'])]
     public function delete(int $id): JsonResponse

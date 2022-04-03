@@ -18,7 +18,6 @@ use Symfony\Component\Serializer\Normalizer\ConstraintViolationListNormalizer;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
 use Symfony\Component\Validator\Exception\ValidationFailedException;
 use Nelmio\ApiDocBundle\Annotation\Operation;
-use OpenApi\Annotations as OA;
 
 class TagController extends AbstractController
 {
@@ -34,7 +33,6 @@ class TagController extends AbstractController
     }
 
     #[Operation(properties: ['operationId' => 'ListTags'])]
-    #[OA\Tag(properties: ['name' => 'Tag'])]
     #[Response(response: 200, description: 'List tags')]
     #[Route(path: '/tag', methods: ['GET'])]
     public function index(): JsonResponse
@@ -51,7 +49,6 @@ class TagController extends AbstractController
     }
 
     #[Operation(properties: ['operationId' => 'ShowTag'])]
-    #[OA\Tag(properties: ['name' => 'Tag'])]
     #[Response(response: 200, description: 'Show tag')]
     #[Response(response: 404, description: 'Tag not found')]
     #[Route(path: '/tag/{id}', requirements: ['id' => '\d+'], methods: ['GET'])]
@@ -71,7 +68,6 @@ class TagController extends AbstractController
     }
 
     #[Operation(properties: ['operationId' => 'CreateTag'])]
-    #[OA\Tag(properties: ['name' => 'Tag'])]
     #[Response(response: 201, description: 'Create tag')]
     #[Response(response: 400, description: 'Invalid input data')]
     #[Route(path: '/tag', methods: ['POST'])]
