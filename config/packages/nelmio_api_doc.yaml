@@ -1,0 +1,12 @@
+nelmio_api_doc:
+    documentation:
+        info:
+            title: Blog API
+            description: Blog API
+            version: 0.1.0
+        servers:
+            - url: http://localhost
+              description: Local server
+    areas: # to filter documented areas
+        path_patterns:
+            - ^/api(?!/doc$) # Accepts routes under /api except /api/doc

@@ -1,0 +1,43 @@
+\App\Entity\Comment:
+  comment1:
+    id: 1001
+    content: really great post!
+    createdBy: '@user1'
+    post: '@post1'
+  comment2:
+    id: 1002
+    content: that post sucks!
+    createdBy: '@user2'
+    post: '@post1'
+  comment3:
+    id: 1003
+    content: useless post!
+    createdBy: '@user1'
+    post: '@post2'
+  comment4:
+    id: 1004
+    content: you better keep your ideas...
+    createdBy: '@user2'
+    post: '@post2'
+\App\Entity\Post:
+  post1:
+    id: 10
+    title: Behold...
+    content: Yesterday many people...
+    createdBy: '@user1'
+  post2:
+    id: 11
+    title: Nature...
+    content: Today many scientists want to find out...
+    createdBy: '@user1'
+\App\Entity\User:
+  user1:
+    id: 1
+    username: alexbobson
+    email: abobson@gmial.com
+    password: unbreakable
+  user2:
+    id: 2
+    username: johndoe
+    email: jd@gmial.com
+    password: simplepass

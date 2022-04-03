@@ -1,0 +1,10 @@
+App\Entity\Comment:
+  attributes:
+    id:
+      groups: [ 'id', 'comment_list', 'comment_show' ]
+    content:
+      groups: [ 'comment_list', 'comment_show', 'comment_create' ]
+    createdBy:
+      groups: [ 'comment_show' , 'comment_create' ]
+    post:
+      groups: [ 'comment_show', 'comment_create' ]

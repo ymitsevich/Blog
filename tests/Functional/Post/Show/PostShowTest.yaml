@@ -1,0 +1,33 @@
+\App\Entity\User:
+  user1:
+    id: 1
+    username: alexbobson
+    email: abobson@gmial.com
+    password: unbreakable
+\App\Entity\Post:
+  post1:
+    id: 10
+    title: Behold...
+    content: Yesterday many people...
+    createdBy: '@user1'
+    tags:
+      - '@tag1'
+      - '@tag2'
+  post2:
+    id: 11
+    title: Pole
+    content: The recent pole results show...
+    createdBy: '@user1'
+    tags:
+      - '@tag2'
+      - '@tag3'
+\App\Entity\Tag:
+  tag1:
+    id: 101
+    name: goodToKnow
+  tag2:
+    id: 102
+    name: hype
+  tag3:
+    id: 103
+    name: misc

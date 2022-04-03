@@ -1,0 +1,6 @@
+status: true
+data:
+  - id: 101
+    name: goodToKnow
+  - id: 102
+    name: hype

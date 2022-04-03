@@ -1,0 +1,12 @@
+App\Entity\Post:
+  attributes:
+    id:
+      groups: [ 'id', 'post_list', 'post_show' ]
+    title:
+      groups: [ 'post_list', 'post_show', 'post_create' ]
+    content:
+      groups: [ 'post_show', 'post_create' ]
+    createdBy:
+      groups: [ 'post_show', 'post_create' ]
+    tags:
+      groups: [ 'post_show', 'post_create' ]
